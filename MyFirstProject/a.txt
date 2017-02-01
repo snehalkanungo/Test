@@ -1,0 +1,25 @@
+Map is an interface. Its not a part of Collections.[Collections—> List,Set and Queue]
+HashMap implements Map.
+LinkedHashMap extends HashMap.
+
+Hash Map: Key-value pair, it doesn’t allow duplicate keys. If duplicate key comes up, it updates the value. It accepts multiple values for a single key. Initial size or capacity is 16.There is no insertion order, arrange keys alphabetically automatically.
+
+How hash map identifies duplicates?: Need to use equals and hash code method. [toString is always needed method in hash code and hashset.]
+ An array (each location of the array is a single linked list)
+Put method: when u use put method, it gets you the hashcode of the key. This hashcode will be passed to the hash function and then it return an integer.This integer is an index inside the array.
+When hashcode is different, the values are different,
+When hash code is same, then but the equals method says they are different — called hash collision.
+
+LinkedHashMap: It is a combination of linked list and hash map. So it maintains insertion order. 
+
+TreeMap: It maintains sorted order. It uses comparable and comparator interfaces, and compareTo method. [It is same as hashMap. It also doesn’t implement equals and hash code methods ]
+
+Hash Table:[Same as Hash map but some points are different] Hash table is a thread safe data structure.It doesn’t allow null keys or null values, will compiles fine but give error at runtime.
+
+LinkedHashTable: [same as LinkedHashMap] It maintains insertion order but doesn’t allow null keys and values.
+
+HashSet uses hash map internally.It prevents duplicate from happening. Key of a hash map is the value to the hashset and value of hash map uses java.lang.object.
+
+And TreeSet internally uses TreeMap that doesn’t allow duplicats.
+
+[HashSet allows only one null value.]
